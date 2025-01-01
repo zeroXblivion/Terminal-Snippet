@@ -1,0 +1,171 @@
+.terminal-snippet-container {
+    margin: 1em 0;
+    padding: 1em;
+    border-radius: 4px;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    overflow-x: auto !important;
+    max-width: 100%;
+    color: #FFFFFF !important; /* Default text color for all snippets */
+}
+
+.terminal-snippet-container pre {
+    margin: 0;
+    padding: 0;
+    background-color: inherit !important; /* Inherit from container */
+}
+
+.terminal-snippet-container code {
+    display: inline-block; /* Using inline-block here needs more thought */
+    min-width: 100%;
+    background-color: inherit !important; /* Inherit from container */
+    color: inherit !important; /* Use the container's color */
+}
+
+.terminal-snippet-container.powershell {
+    background-color: #012456 !important;
+    color: #FFFFFF !important;
+}
+
+.terminal-snippet-container.cmd {
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
+}
+
+.terminal-snippet-container.bash {
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
+}
+
+.terminal-snippet-container,
+.terminal-snippet-container pre,
+.terminal-snippet-container code {
+    white-space: pre !important; /* Applying this to all these elements might be redundant */
+    word-wrap: normal !important;
+    overflow-wrap: normal !important; /* Need to understand the difference between word-wrap and overflow-wrap */
+}
+
+/* Minimal highlight class so it doesn't block editing/clicks */
+.terminal-snippet-highlight {
+    background: none;
+    pointer-events: auto; /* Important: let user click & select text */
+}
+
+.theme-dark .terminal-snippet-container pre,
+.theme-light .terminal-snippet-container pre {
+    background-color: inherit !important; /*  More inheriting for different themes */
+}
+
+.theme-dark .terminal-snippet-container code,
+.theme-light .terminal-snippet-container code {
+    background-color: inherit !important;
+    color: inherit !important; /* Ensure text color is inherited from container */
+}
+
+.theme-dark .terminal-snippet-container,
+.theme-light .terminal-snippet-container {
+    color: #FFFFFF !important; /*  Setting color for themes when it's already in the base class */
+}
+
+.terminal-snippet-container {
+    margin: 20px 0; /* Space between snippets */
+    border-radius: 6px; /* Rounded corners */
+    overflow: hidden; /* Ensure clean layout */
+}
+
+.terminal-snippet-header {
+    display: flex;
+    align-items: center;
+    padding: 6px 10px;
+    background-color: #1a2332; /* Dark header background */
+    color: #fff;
+    border-radius: 6px 6px 0 0; /* Rounded top corners only */
+    font-size: 12px;
+}
+
+.terminal-snippet-buttons {
+    display: flex;
+    gap: 6px;
+    margin-right: 10px;
+}
+
+.terminal-btn {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.terminal-btn.close {
+    background-color: #ff3e3e;
+}
+
+.terminal-btn.minimize {
+    background-color: #ffaf00;
+}
+
+.terminal-btn.maximize {
+    background-color: #9fef00;
+}
+
+.terminal-snippet-title-container {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center; /* Center the title by default */
+    gap: 8px; /* Space between title and icon */
+}
+
+.terminal-snippet-title {
+    font-size: 12px;
+    font-weight: bold;
+    user-select: text; /* Allow text selection */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    min-width: 50px; /* Minimum width to prevent icon overlap */
+    text-align: center; /* Center the text within the container */
+}
+
+.terminal-snippet-title[contenteditable='true'] {
+    background-color: rgba(255, 255, 255, 0.1); /* Visual feedback when editing */
+    outline: none; /* Remove default focus outline */
+    padding: 0 4px;
+    border-radius: 4px;
+}
+
+.terminal-snippet-edit-icon {
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.terminal-snippet-edit-icon:hover {
+    opacity: 1;
+}
+
+.terminal-snippet-title {
+    flex-grow: 1;
+    text-align: center; /*  This seems like a redundant text-align */
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.terminal-snippet-content {
+    padding: 15px;
+    font-family: monospace;
+    background-color: #012456; /* Terminal content background */
+    color: #fff; /* Text color */
+    overflow-x: auto !important; /* Ensure horizontal scrolling works */
+    white-space: pre !important; /* Prevent text wrapping */
+    line-height: 1.4;
+    border-radius: 0 0 6px 6px; /* Rounded bottom corners */
+    display: block; /* Need to verify why content needs to be block */
+    width: 100%; /* Take full width of the container */
+}
+
+.terminal-snippet-content pre,
+.terminal-snippet-content code {
+    display: block; /*  Another block level declaration here */
+    min-width: 100%;
+    max-width: initial; /* Allow content to exceed parent width */
+    overflow-x: inherit; /* Ensure content inside pre/code doesn't restrict scrolling */
+}

@@ -1,0 +1,16 @@
+{
+  "terminalStyles": {
+    "powershell": {
+      "background": "#012456",
+      "foreground": "#FFFFFF"
+    },
+    "cmd": {
+      "background": "#000000",
+      "foreground": "#FFFFFF"
+    },
+    "bash": {
+      "background": "#300b25",
+      "foreground": "#FFFFFF"
+    }
+  }
+}

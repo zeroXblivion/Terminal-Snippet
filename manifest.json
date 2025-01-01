@@ -1,0 +1,10 @@
+{
+    "id": "Terminal Code Snippet",
+    "name": "Terminal Snippets",
+    "version": "1.0.0",
+    "minAppVersion": "1.7.7",
+    "description": "Create and style terminal snippets with syntax highlighting and horizontal scrolling",
+    "author": "0xblivion",
+    "authorUrl": "https://github.com/zeroXblivion",
+    "isDesktopOnly": false
+}
